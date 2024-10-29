@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'DjangoCodingExercise.wsgi.application'
 DATABASES = {
     'default': {
         'HOST': 'localhost',
-        'NAME': 'db_name',
+        'NAME': 'django_interview_db',
         'ENGINE': 'django.db.backends.postgresql',
-        'USER': 'db_user',
-        'PASSWORD': 'db_pass'
+        'USER': 'alex',
+        'PASSWORD': '123456'
     },
 }
 

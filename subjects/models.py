@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 class Subject(models.Model):
     """Subjects model."""
@@ -8,3 +8,16 @@ class Subject(models.Model):
 
     def __str__(self):
         return self.name
+
+class Student(models.Model):
+
+    name = models.ForeignKey(User, on_delete=models.SET_NULL, null = True, blank=True, default= None)
+    subject = models.ForeignKey(Subject, on_delete=models.SET_NULL, null = True)
+    completed = models.BooleanField(default=False) 
+
+    class Meta:
+        unique_together = ('name', 'subject')
+
+    def __str__(self):
+        return self.name
+    

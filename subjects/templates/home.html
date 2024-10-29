@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<title>Subjects django interview</title>
+
+<body>
+    <div class="container">
+        {% for subject in subjects %}
+            <tr>
+                <td>{{subject.id}}</td>
+                <td>{{subject.name}} </td>
+            </tr>
+        {% endfor %}
+    </div>
+</body>
+
+</hmtl>
